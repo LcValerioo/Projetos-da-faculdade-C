@@ -1,1 +1,33 @@
-
+#include <stdio.h>
+ 
+// Função genérica para entrada de dados
+void entradaDados() {
+    // código para a função entradaDados
+    float p1, p2;
+    printf("Insira o valor da p1: ");
+    scanf("%f", &p1);
+    printf("Insira o valor da p2: ");
+    scanf("%f", &p2);
+}
+ 
+// Função genérica para cálculo da média
+float calcularMedia() {
+    // código para a função calcularMedia
+    float media;
+    media = (p1 + p2) / 2;
+}
+ 
+// Função genérica para exibir dados
+void exibirMedia() {
+    // código para a função exibirMedia
+    printf("A média do aluno é %.2f\n", media);
+}
+ 
+int main() {
+    float media;
+    entradaDados();
+    media = calcularMedia();
+    exibirMedia();
+ 
+    return 0;
+}
