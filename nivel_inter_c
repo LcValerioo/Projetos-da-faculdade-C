@@ -14,7 +14,8 @@ void entradaDados() {
 float calcularMedia() {
     // código para a função calcularMedia
     float media;
-    media = (p1 + p2) / 2;
+    media = (entradaDados(p1) + entradaDados(p2)) / 2;
+    return media;
 }
  
 // Função genérica para exibir dados
