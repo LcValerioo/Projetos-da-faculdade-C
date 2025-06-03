@@ -1,1 +1,60 @@
-Aqui vou fazer o commit de todos os codigos que eu fizer na hora de uma inspiração.
+// Aqui vou fazer o commit de todos os codigos que eu fizer na hora de uma inspiração.
+
+/******************************************************************************
+
+Olá. Esse codigo visa a criação de um menu simples e interativo.
+
+*******************************************************************************/
+#include <stdio.h>
+
+int main()
+{
+    printf("Hello World\n");
+    
+    float x, y = 0;
+    int  opcao1 = 0;
+    char texto, opcao2;
+    
+    printf("Olá, vamos montar um menu ?\n");
+    
+    
+    do
+    {
+        printf("\nEscolha uma Opção: \n");
+        printf("\n");
+        printf("Opção 1 para escrever um texto e exibir na tela.\n");
+        printf("Opção 2 para fazer uma operação matematica .\n");
+        printf("Opção 3 para sair.\n");
+        scanf("%d", &opcao1);
+        switch(opcao1){
+            case 1:
+            printf("Digite um Caractere: ");
+            scanf("%s", &texto);
+            printf("Caractere digitado: %c\n", texto);
+            break;
+            
+            case 2:
+            printf("Digite o primeiro numero: ");
+            scanf("%f", &x);
+            printf("Digite o segundo numero: ");
+            scanf("%f", &y);
+            printf("Qual operação deseja fazer: '+', '-', '/', '*' ?\n");
+            scanf("%s", &opcao2);
+            switch(opcao2){
+                case '+': printf("O resultado de %.1f + %.1f = %.2f.\n", x,y, x+y); break;
+                case '-': printf("O resultado de %.1f - %.1f = %.2f.\n", x,y, x-y); break;
+                case '/': printf("O resultado de %.1f / %.1f = %.2f.\n", x,y, x/y); break;
+                case '*': printf("O resultado de %.1f * %.1f = %.2f.\n", x,y, x*y); break;
+                default: printf("Opção invalida.");
+            }
+            break;
+            case 3: printf("Saindo do Programa...\n"); break;
+            
+            default: printf("Opção invalida.");
+        }
+    } while(opcao1 != 3);
+    
+    printf("\n\n---Fim do Programa---\n\n");
+    
+    return 0;
+}
